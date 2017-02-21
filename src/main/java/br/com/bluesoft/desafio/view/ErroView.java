@@ -1,10 +1,10 @@
-package br.com.bluesoft.desafio.representation;
+package br.com.bluesoft.desafio.view;
 
-public class ErroRepresentation {
+public class ErroView {
     
     private final String mensagem;
 
-    public ErroRepresentation(String mensagem) {
+    public ErroView(String mensagem) {
         this.mensagem = mensagem;
     }
 

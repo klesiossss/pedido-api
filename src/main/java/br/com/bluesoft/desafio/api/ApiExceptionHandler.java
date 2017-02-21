@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.bluesoft.desafio.representation.ErroRepresentation;
+import br.com.bluesoft.desafio.view.ErroView;
 
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 
@@ -15,8 +15,8 @@ public class ApiExceptionHandler {
 
     @ResponseStatus(INTERNAL_SERVER_ERROR)
     @ExceptionHandler(Exception.class)
-    public ErroRepresentation handleException(Exception ex) {
-        return new ErroRepresentation(ex.getMessage());
+    public ErroView handleException(Exception ex) {
+        return new ErroView(ex.getMessage());
     }
 
 }
