@@ -58,7 +58,7 @@
 		      <version>0.4.13</version>
 		      <configuration>
 		        <imageName>desafio-bluesoft</imageName>
-		        <baseImage>openjdk</baseImage>
+		        <baseImage>openjdk:8-jdk</baseImage>
 		        <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
 		        <resources>
 		           <resource>
