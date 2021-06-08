@@ -19,7 +19,7 @@ import br.com.bluesoft.desafio.service.PedidoService;
  * 
  * http://localhost:8080/swagger-ui.html 
  * 
- * Para o Banco H2 acesse:
+ * Para acesar o Banco de dados H2, acesse:
  * 
  * http://localhost:8080/h2-console
  * 
