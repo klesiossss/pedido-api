@@ -2,7 +2,6 @@ package br.com.bluesoft.desafio.model;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -12,25 +11,30 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import io.swagger.annotations.ApiModelProperty;
 
 @Entity
-@Setter @Getter
-@AllArgsConstructor
-@NoArgsConstructor
 public class Pedido {
 	
+	public Pedido(Long id, List<Item> itens, Fornecedor fornecedor) {
+		this.id = id;
+		this.itens = itens;
+		this.fornecedor = fornecedor;
+	}
+	
+	public Pedido() {
+	}
+		
+	@ApiModelProperty(value = "Codigo do pedido")
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@ApiModelProperty(value = "Lista de itens")
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "pedido")
 	private List<Item> itens = new ArrayList<Item>();
 	
+	@ApiModelProperty(value = "Fornecedor do pedido")
 	@ManyToOne
 	private Fornecedor fornecedor;
 	
@@ -44,6 +48,31 @@ public class Pedido {
 		 itens.add(item);
 		 item.setPedido(this);  
 	    }
+	
+	 
+	 public Long getId() {
+			return id;
+		}
+
+		public void setId(Long id) {
+			this.id = id;
+		}
+
+		public List<Item> getItens() {
+			return itens;
+		}
+
+		public void setItens(List<Item> itens) {
+			this.itens = itens;
+		}
+
+		public Fornecedor getFornecedor() {
+			return fornecedor;
+		}
+
+		public void setFornecedor(Fornecedor fornecedor) {
+			this.fornecedor = fornecedor;
+		}
 	 
 	
 }

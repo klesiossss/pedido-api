@@ -104,6 +104,8 @@ public class PedidoService {
 		return pedidoRepo.findAll();
 	}
 	
-	
+	public Pedido salva(Pedido pedido) {
+		return pedidoRepo.save(pedido);
+	}
 
 }
