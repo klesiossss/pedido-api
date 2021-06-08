@@ -15,6 +15,10 @@ import br.com.bluesoft.desafio.model.Request;
 import br.com.bluesoft.desafio.service.PedidoService;
 
 /**
+ * obs: caso haja dificuldade de dar start na aplicacao, click direito no projeto -> Run as -> Run configurations ->
+ *  em (x)=Arguments selecione o ckeckbox: "Use @argfile when launching" e entao Run.
+ * 
+ * 
  * Apos subir a aplicacao acesse:
  * 
  * http://localhost:8080/swagger-ui.html 
