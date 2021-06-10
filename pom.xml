@@ -117,5 +117,6 @@
               
 		    </plugin>
 		</plugins>
+		<finalName>desafio</finalName>
 	</build>
 </project>
